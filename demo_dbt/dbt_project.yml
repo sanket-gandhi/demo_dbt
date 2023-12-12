@@ -6,6 +6,10 @@ name: 'demo_dbt'
 version: '1.0.0'
 config-version: 2
 
+vars:
+#champion of all countries
+  country_champion: INDIA
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'demo_dbt'
 
@@ -36,4 +40,5 @@ models:
     example:
       +materialized: view
     snowflake_sample_data:
+      +materialized: view
       +schema: staging

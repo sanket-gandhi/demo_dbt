@@ -19,3 +19,12 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: example__user_csv
+    description: "User csv file seeded"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
