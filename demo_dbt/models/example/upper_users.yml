@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: example__upper_users
+    description: "User csv file seeded"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
