@@ -1,0 +1,53 @@
+version: 2
+
+sources:
+  - name: sample_data
+    description: This is default sample snowflake_sample_data database
+    database: snowflake_sample_data  
+    schema: TPCDS_SF100TCL  
+    tables:
+      - name: customer
+        description: details about customer
+        columns:
+          - name: c_customer_id
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+              
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+ 
+  - name: first_name_dtl
+    description: "first name of customers"
+    columns:
+      - name: f_name
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+   
+  - name: last_name_dtl
+    description: "last name of customers"
+    columns:
+      - name: l_name
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null

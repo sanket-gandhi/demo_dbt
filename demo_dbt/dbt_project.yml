@@ -42,3 +42,6 @@ models:
     snowflake_sample_data:
       +materialized: view
       +schema: staging
+    landing:
+      +materialized: view
+      +schema: landing
