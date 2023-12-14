@@ -42,6 +42,9 @@ models:
         tests:
           - unique
           - not_null
+    tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('last_name_dtl')
    
   - name: last_name_dtl
     description: "last name of customers"
@@ -51,3 +54,4 @@ models:
         tests:
           - unique
           - not_null
+    

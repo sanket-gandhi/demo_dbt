@@ -4,8 +4,10 @@ with first_name as (
     select 'akshay' as f_name
     UNION
     select 'gaurav' as f_name
+    UNION
+    select 'mayur' as f_name
 ),
 final as (
     select * from first_name
 )
-select * from final
+select *, '{{ invocation_id }}' from final

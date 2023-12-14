@@ -39,9 +39,17 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+      +tags: t1
     snowflake_sample_data:
       +materialized: view
       +schema: staging
+      +tags: t2
     landing:
       +materialized: view
       +schema: landing
+      +tags:
+        - t3
+        - t4
+      child_landing:
+        +schema: landing
+        +tags: t5

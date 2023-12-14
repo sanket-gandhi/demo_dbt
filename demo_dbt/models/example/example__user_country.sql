@@ -14,6 +14,8 @@ with user_country as (
     SELECT 765 as USER_ID, 'US' AS COUNTRY
     UNION
     SELECT 345 as USER_ID, 'AFRICA' AS COUNTRY
+    UNION
+    SELECT 346 as USER_ID, 'SINGAPORE' AS COUNTRY
 ),
 user_join as (
     SELECT t1.COUNTRY, t2.* 
